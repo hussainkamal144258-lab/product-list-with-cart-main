@@ -1,0 +1,45 @@
+body{
+    background-color: hsl(20, 50%, 98%);  
+   margin: 20px;
+   padding: 10px;
+   border: 2px solid;
+    
+
+
+}
+.mother{
+    width: 90%;
+    max-width:1440px; 
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+     
+}
+h1{
+    font-weight: bold;
+    font-size: large;
+}
+ .waffle{
+    width: 150px;
+    height: 200px;
+    background-color: rgb(247, 208, 178);
+     color:  hsl(14, 86%, 42%);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+ }
+ img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
+ }
+ button{
+    border-radius: 50px ; 
+    border: 2px solid hsl(14, 86%, 42%); ;
+ }
+ .icon{
+    width: %;
+    height: auto;
+ }
