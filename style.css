@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap');
+
 body{
     background-color: hsl(20, 50%, 98%);  
    margin: 20px;
    padding: 10px;
    border: 2px solid;
-    
+    font-family: 'Red Hat Text', sans-serif;
 
 
 }
+
+ 
+
+ 
+
 .mother{
     width: 90%;
     max-width:1440px; 
@@ -20,26 +27,62 @@ h1{
     font-size: large;
 }
  .waffle{
-    width: 150px;
-    height: 200px;
-    background-color: rgb(247, 208, 178);
-     color:  hsl(14, 86%, 42%);
+    width: 200px;
+    height: auto;
+     color:  hsl(0, 0%, 0%);
     display: flex;
     flex-direction: column;
-    padding: 10px;
-
+    padding: 6px;
+ }
+ 
+ .fimg{
+    position: relative;
  }
  img{
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 5px;
-    
  }
  button{
-    border-radius: 50px ; 
-    border: 2px solid hsl(14, 86%, 42%); ;
+    border-radius: 30px ; 
+    border: 0.1px solid hsl(14, 25%, 38%);
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+ width: 135px;
+height: 35px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
  }
- .icon{
-    width: %;
-    height: auto;
+.bu-im{
+   width: 16px;
+   height: auto;
+   margin-right: 0px;
+}
+ .wa{
+    font-size: 10px;
+    margin-top: 30px;
+    margin-bottom: 1px;
+   color: hsl(12, 20%, 44%);
+    
+     
+ }
+ h4{
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+     
+    color: hsl(14, 65%, 9%); 
+    font-weight: 600px; 
+ }
+ .pr{
+    font-size: 12px;
+    margin-top: 0px;
+    color: hsl(14, 86%, 42%);
+    font-weight: 600px;
  }
