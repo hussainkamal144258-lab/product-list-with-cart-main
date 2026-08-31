@@ -12,8 +12,13 @@ body{
 .mother{
     width: 90%;
     max-width:1440px; 
+<<<<<<< HEAD
      display: flex;
     flex-direction:row;
+=======
+    display: flex;
+    flex-diraction:row;
+>>>>>>> 3b44c8ab3c7f559fb651b43f5ff6d8c3df65093e
     align-items: flex-start;
     gap: 20px;
      
