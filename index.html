@@ -2,161 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
-<link rel="stylesheet" href="style.css">
-  
+  <title>Frontend Mentor Product list with cart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Desserts</h1>
-<div class="mother"> 
+  <div class="app-container">
+    <main class="products-section">
+      <h1>Desserts</h1>
+      <div class="product-grid" id="product-grid">
+ 
+      </div>
+    </main>
+
+    <aside class="cart-section">
+      <div class="cart-card" id="cart-card">
+        <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+        
+       
+        <div class="empty-cart" id="empty-cart">
+          <img src="./assets/images/illustration-empty-cart.svg" alt="Empty cart illustration">
+          <p>Your added items will appear here</p>
+        </div>
+
+        
+        <div class="active-cart hidden" id="active-cart">
+          <ul class="cart-items" id="cart-items"></ul>
+          <div class="cart-total-container">
+            <span>Order Total</span>
+            <strong class="cart-total-price" id="cart-total-price">$0.00</strong>
+          </div>
+          <div class="carbon-delivery">
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="Carbon neutral icon">
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+          <button class="confirm-order-btn" id="confirm-order-btn">Confirm Order</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+ 
+  
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal-content">
+      <img src="./assets/images/icon-order-confirmed.svg" alt="Order confirmed icon" class="modal-icon">
+      <h2>Order Confirmed</h2>
+      <p class="modal-subtext">We hope you enjoy your food!</p>
       
-<div class="fline">
-<div class="carts">
- <div class="fimg">
-  <img src="./assets/images/image-waffle-desktop.jpg" alt="waffle">
-  <button type="button">
-   <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im"> Add to Cart
-  </button>
-  </div>
- <P>Waffle </P> 
-  <h4>Waffle with Berries</h4>
-  <P class="price">$6.50</P>
-  </div> 
+      <div class="summary-container">
+        <ul class="summary-items" id="summary-items"></ul>
+        <div class="summary-total-container">
+          <span>Order Total</span>
+          <strong id="summary-total-price">$0.00</strong>
+        </div>
+      </div>
 
- <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-tiramisu-desktop.jpg" alt="tiramisu ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Tiramisu </p>
- <h4>Classic Tiramisu</h4>
-   <p class="price">$5.50 </p>
-  </div> 
-
-<div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-cake-desktop.jpg" alt="cake ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Cake </p>
- <h4>Red Velvet Cake</h4>
-   <p class="price">$4.50 </p>
-  </div> 
-</div>
-
- <div class="sline">
-  
- <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-creme-brulee-desktop.jpg" alt="tiramisu">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Crème Brûlée</p>
- <h4> Vanilla Bean Crème Brûlée </h4>
-   <p class="price">$7.00</p>
-  </div> 
- 
- 
-  <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-baklava-desktop.jpg" alt="baklava ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Baklava </p>
- <h4>Pistachio Baklava</h4>
-   <p class="price">$4.00 </p>
-  </div> 
-
-  <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-brownie-desktop.jpg" alt="brownie ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Brownie </p>
- <h4>Salted Caramel Brownie</h4>
-   <p class="price">$4.50 </p>
-  </div> 
- </div>
-   
-  
-<div class="tline">
-   <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-macaron-desktop.jpg" alt="macaron">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Macaron</p>
- <h4>Macaron Mix of Five </h4>
-   <p class="price">$8.00</p>
-  </div> 
- 
-   
-      <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-meringue-desktop.jpg" alt="meringue ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im">
-    Add to Cart
-  </button>
-</div>
-  <p>Pie </p>
- <h4>Lemon Meringue Pie</h4>
-   <p class="price">$5.00 </p>
-  </div> 
-
-  
-
-   <div class="carts"> 
-  <div class="fimg">
-  <img src="./assets/images/image-panna-cotta-desktop.jpg" alt="panna-cotta ">
-  <button type="button">
-    <img src="./assets/images/icon-add-to-cart.svg" alt="" class="bu-im"> 
-    Add to Cart
-  </button>
-</div>
-  <p>Panna Cotta</p>
- <h4>Vanilla Panna Cotta</h4>
-   <p class="price">$6.50 </p>
-  </div> 
- </div>
-
-   <div> 
-  <div class="added-cart">
-   <h2>Your Cart (0)</h2>
-  <img src="./assets/images/illustration-empty-cart.svg" alt="" class="last-img">
-   <p class="last-p">Your added items will appear here</p>
-  </div>
+      <button class="new-order-btn" id="new-order-btn">Start New Order</button>
+    </div>
   </div>
 
-</div>
-   
-<div class="footer"> 
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/hussainkamal144258-lab/product-list-with-cart-main.git"> Hussein Kamal</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/hussainkamal144258-lab/product-list-with-cart-main.git">Hussein Kamal</a>.
   </footer>
-  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
